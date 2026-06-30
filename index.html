@@ -13,8 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" />
 
-<link rel="preload" as="image" href="images/hero_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
-<link rel="preload" as="image" href="images/hero_desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
 <script>
@@ -51,9 +50,9 @@
   function getLeadIdFromStorage(origin) {
     const key = STORAGE_KEY[origin];
     if (!key) return null;
-    const raw = localStorage.getItem(key);
-    if (!raw) return null;
     try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return null;
       const obj = JSON.parse(raw);
       return obj && obj._id ? String(obj._id) : null;
     } catch {
@@ -728,10 +727,19 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
 // Countdown 15 min persistent per session
 (function(){
   var KEY='bcto_deadline_es';
-  var deadline=parseInt(sessionStorage.getItem(KEY)||'0',10);
+  var deadline = 0;
+  try {
+    deadline = parseInt(sessionStorage.getItem(KEY)||'0',10);
+  } catch(e) {}
   var now=Date.now();
-  if(!deadline||deadline<now){deadline=now+15*60*1000;sessionStorage.setItem(KEY,deadline);}
+  if(!deadline||deadline<now){
+    deadline=now+15*60*1000;
+    try {
+      sessionStorage.setItem(KEY,deadline);
+    } catch(e) {}
+  }
   var h=document.getElementById('t-h'),m=document.getElementById('t-m'),s=document.getElementById('t-s');
+  if(!h || !m || !s) return;
   function tick(){
     var diff=Math.max(0,deadline-Date.now());
     var hh=Math.floor(diff/3600000), mm=Math.floor(diff%3600000/60000), ss=Math.floor(diff%60000/1000);
