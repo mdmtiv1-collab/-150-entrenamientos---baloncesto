@@ -611,9 +611,6 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
       <h2>Un Vistazo a Lo Que Recibirás</h2>
     </div>
     <p class="carousel-intro">Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.</p>
-    <div style="text-align: center; color: var(--accent); font-weight: 700; margin-top: -0.75rem; margin-bottom: 1.75rem; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-      👉 <span style="text-transform: uppercase; letter-spacing: 0.5px;">Haz clic en las flechas para ver la app por dentro</span> 👈
-    </div>
     
     <div class="carousel-wrapper-outer">
       <button class="carousel-btn prev" id="slideLeft" aria-label="Anterior">&#8249;</button>
@@ -805,6 +802,9 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
     const delay = 18000 + Math.random() * 12000;
     setTimeout(() => {
       showNotification();
+      triggerNext();
+    }, delay);
+  }
   triggerNext();
 })();
 
@@ -814,11 +814,41 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
   var leftBtn = document.getElementById('slideLeft');
   var rightBtn = document.getElementById('slideRight');
   if(carousel && leftBtn && rightBtn) {
+    var slides = carousel.querySelectorAll('.slide');
+    var index = 0;
+    
+    function scrollToSlide(newIndex) {
+      if(newIndex < 0 || newIndex >= slides.length) return;
+      index = newIndex;
+      var slideWidth = slides[0].offsetWidth;
+      var gap = 18; // gap defined in CSS
+      var scrollPos = index * (slideWidth + gap);
+      carousel.scrollTo({ left: scrollPos, behavior: 'smooth' });
+    }
+    
     leftBtn.addEventListener('click', function(){
-      carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
+      if(index > 0) {
+        scrollToSlide(index - 1);
+      } else {
+        scrollToSlide(slides.length - 1); // wrap to end
+      }
     });
+    
     rightBtn.addEventListener('click', function(){
-      carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+      if(index < slides.length - 1) {
+        scrollToSlide(index + 1);
+      } else {
+        scrollToSlide(0); // wrap to beginning
+      }
+    });
+    
+    // Update local index on manual touch swipe scroll
+    carousel.addEventListener('scroll', function() {
+      var slideWidth = slides[0].offsetWidth;
+      var gap = 18;
+      if(slideWidth > 0) {
+        index = Math.round(carousel.scrollLeft / (slideWidth + gap));
+      }
     });
   }
 })();
