@@ -253,16 +253,56 @@ section{padding:64px 0}
 .price-cta.full{background:linear-gradient(90deg,var(--orange),var(--orange-hover));color:#fff;box-shadow:0 8px 20px var(--orange-glow)}
 .pay-info{text-align:center;color:var(--text-secondary);margin-top:18px;font-size:13px}
 
-/* Carousel */
-.carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 20px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-.carousel::-webkit-scrollbar{height:8px}
-.carousel::-webkit-scrollbar-thumb{background:var(--border);border-radius:8px}
-.slide{flex:0 0 280px;scroll-snap-align:start;background:var(--bg-surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.slide img{aspect-ratio:1063/1536;object-fit:cover;width:100%}
-.slide .sb{padding:16px}
+/* Carousel with Navigation Arrows */
+.carousel-wrapper-outer {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 20px;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-behavior:smooth}
+.carousel::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;background:var(--bg-surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg);display:flex;flex-direction:column}
+.slide img{aspect-ratio:9/16;object-fit:cover;width:100%}
+.slide .sb{padding:18px;text-align:center;border-top:1px solid var(--border)}
 .slide h3{font-size:15px;font-weight:800;color:#ffffff;margin-bottom:6px}
-.slide p{font-size:13.5px;color:var(--text-secondary)}
+.slide p{font-size:13px;color:var(--text-secondary);margin:0}
 .carousel-intro{text-align:center;color:var(--text-secondary);max-width:680px;margin:0 auto 24px}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(10, 10, 12, 0.9);
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(232, 78, 27, 0.25);
+  transition: all 0.2s ease;
+}
+.carousel-btn:hover {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(232, 78, 27, 0.5);
+}
+.carousel-btn.prev {
+  left: -60px;
+}
+.carousel-btn.next {
+  right: -60px;
+}
+@media (max-width: 480px) {
+  .carousel-btn.prev { left: -12px; }
+  .carousel-btn.next { right: -12px; }
+}
+
 
 /* Testimonials */
 .t-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
@@ -572,15 +612,20 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
     </div>
     <p class="carousel-intro">Ejercicios reales de la aplicación con diagramas profesionales, explicaciones detalladas y videos dinámicos.</p>
     <div style="text-align: center; color: var(--accent); font-weight: 700; margin-top: -0.75rem; margin-bottom: 1.75rem; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-      👉 <span style="text-transform: uppercase; letter-spacing: 0.5px;">Desliza hacia los lados para ver la app por dentro</span> 👈
+      👉 <span style="text-transform: uppercase; letter-spacing: 0.5px;">Haz clic en las flechas para ver la app por dentro</span> 👈
     </div>
-    <div class="carousel" id="carousel">
-      <div class="slide"><img src="images/members_shooting.png" alt="Categoría de Tiro en la App" loading="lazy" /><div class="sb"><h3>Área de Tiro — App por Dentro</h3><p>Video de entrenamiento interactivo y guía detallada del ejercicio.</p></div></div>
-      <div class="slide"><img src="images/members_defense.png" alt="Categoría de Defensa en la App" loading="lazy" /><div class="sb"><h3>Área de Defensa — App por Dentro</h3><p>Rutinas de posicionamiento defensivo y marcación en video.</p></div></div>
-      <div class="slide"><img src="images/members_passing.png" alt="Categoría de Pases en la App" loading="lazy" /><div class="sb"><h3>Área de Pases — App por Dentro</h3><p>Demostración práctica de diferentes tipos de pases en cancha.</p></div></div>
-      <div class="slide"><img src="images/members_dribbling.png" alt="Categoría de Dribling en la App" loading="lazy" /><div class="sb"><h3>Área de Dribling — App por Dentro</h3><p>Ejercicios dinámicos de manejo y control de balón.</p></div></div>
-      <div class="slide"><img src="images/members_agility.png" alt="Categoría de Agilidad en la App" loading="lazy" /><div class="sb"><h3>Área de Agilidad — App por Dentro</h3><p>Coordinación con escalera y velocidad de reacción.</p></div></div>
-      <div class="slide"><img src="images/members_conditioning.png" alt="Categoría de Físico en la App" loading="lazy" /><div class="sb"><h3>Físico y Resistencia — App por Dentro</h3><p>Circuitos y ejercicios de impulsión y fuerza explosiva.</p></div></div>
+    
+    <div class="carousel-wrapper-outer">
+      <button class="carousel-btn prev" id="slideLeft" aria-label="Anterior">&#8249;</button>
+      <div class="carousel" id="carousel">
+        <div class="slide"><img src="images/members_shooting.png" alt="Categoría de Tiro en la App" loading="lazy" /><div class="sb"><h3>Área de Tiro — App por Dentro</h3><p>Video de entrenamiento interactivo y guía detallada del ejercicio.</p></div></div>
+        <div class="slide"><img src="images/members_defense.png" alt="Categoría de Defensa en la App" loading="lazy" /><div class="sb"><h3>Área de Defensa — App por Dentro</h3><p>Rutinas de posicionamiento defensivo y marcación en video.</p></div></div>
+        <div class="slide"><img src="images/members_passing.png" alt="Categoría de Pases en la App" loading="lazy" /><div class="sb"><h3>Área de Pases — App por Dentro</h3><p>Demostración práctica de diferentes tipos de pases en cancha.</p></div></div>
+        <div class="slide"><img src="images/members_dribbling.png" alt="Categoría de Dribling en la App" loading="lazy" /><div class="sb"><h3>Área de Dribling — App por Dentro</h3><p>Ejercicios dinámicos de manejo y control de balón.</p></div></div>
+        <div class="slide"><img src="images/members_agility.png" alt="Categoría de Agilidad en la App" loading="lazy" /><div class="sb"><h3>Área de Agilidad — App por Dentro</h3><p>Coordinación con escalera y velocidad de reacción.</p></div></div>
+        <div class="slide"><img src="images/members_conditioning.png" alt="Categoría de Físico en la App" loading="lazy" /><div class="sb"><h3>Físico y Resistencia — App por Dentro</h3><p>Circuitos y ejercicios de impulsión y fuerza explosiva.</p></div></div>
+      </div>
+      <button class="carousel-btn next" id="slideRight" aria-label="Siguiente">&#8250;</button>
     </div>
   </div>
 </section>
@@ -760,10 +805,22 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
     const delay = 18000 + Math.random() * 12000;
     setTimeout(() => {
       showNotification();
-      triggerNext();
-    }, delay);
-  }
   triggerNext();
+})();
+
+// Carousel arrow navigation click actions
+(function(){
+  var carousel = document.getElementById('carousel');
+  var leftBtn = document.getElementById('slideLeft');
+  var rightBtn = document.getElementById('slideRight');
+  if(carousel && leftBtn && rightBtn) {
+    leftBtn.addEventListener('click', function(){
+      carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
+    });
+    rightBtn.addEventListener('click', function(){
+      carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+    });
+  }
 })();
 </script>
 </body>
