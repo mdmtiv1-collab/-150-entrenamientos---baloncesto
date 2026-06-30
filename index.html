@@ -1,824 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
-
-<script>
-  window.pixelId = "6a372daa8e94d0f34725c14c";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xdnmd0lf1o");
-</script>
-
-<script>
-(function () {
-  const POLL_MS = 500;
-  const UTM_SEP = "jLj";          
-  const XCOD_SEP = "hQwK21wXxR"; 
-
-  const STORAGE_KEY = { FB: "lead", google: "lead-google" };
-  
-  function getOrigin(utmSource) {
-    if (!utmSource) return null;
-    const base = utmSource.split(UTM_SEP)[0];
-    return base === "FB" || base === "google" ? base : null;
-  }
-
-  function getLeadIdFromStorage(origin) {
-    const key = STORAGE_KEY[origin];
-    if (!key) return null;
-    const raw = localStorage.getItem(key);
-    if (!raw) return null;
-    try {
-      const obj = JSON.parse(raw);
-      return obj && obj._id ? String(obj._id) : null;
-    } catch {
-      return null;
-    }
-  }
-
-  function resolveLeadId(utmSource, origin) {
-    const prefix = origin + UTM_SEP;
-    if (utmSource && utmSource.startsWith(prefix)) {
-      const id = utmSource.slice(prefix.length);
-      if (id) return id;
-    }
-    return getLeadIdFromStorage(origin);
-  }
-
-  function applyIfNeeded() {
-    const url = new URL(window.location.href);
-    const currentSource = url.searchParams.get("utm_source");
-    const origin = getOrigin(currentSource);
-    if (!origin) return false;
-
-    const id = resolveLeadId(currentSource, origin);
-    if (!id) return false;
-
-    const desired = origin + UTM_SEP + id;
-    let changed = false;
-
-    if (currentSource !== desired) {
-      url.searchParams.set("utm_source", desired);
-      changed = true;
-    }
-
-    const currentXcod = url.searchParams.get("xcod");
-    if (currentXcod) {
-      const parts = currentXcod.split(XCOD_SEP);
-      if (parts[0] !== desired) {
-        parts[0] = desired;
-        url.searchParams.set("xcod", parts.join(XCOD_SEP));
-        changed = true;
-      }
-    }
-
-    if (!changed) return true;
-    window.location.replace(url.toString());
-    return true;
-  }
-
-  if (applyIfNeeded()) return;
-  const interval = setInterval(() => {
-    if (applyIfNeeded()) clearInterval(interval);
-  }, POLL_MS);
-})();
-</script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>+150 Exercícios de Basquete em Vídeo | Pacote Completo</title>
-  <meta name="description" content="Acesso imediato a +150 exercícios de basquete em vídeo com metodologias validadas. Bônus exclusivos para treinadores e formadores.">
-
-
-
-  <link rel="preload" as="image" href="images/hero_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
-  <link rel="preload" as="image" href="images/hero_desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
-
-  <!-- OG tags for social sharing -->
-  <meta property="og:title" content="+150 Exercícios de Basquete em Vídeo | Pacote Completo" />
-  <meta property="og:description" content="Acelere os treinos de seu time com mais de 150 dinâmicas de basquete prontas e validadas." />
-  <meta property="og:type" content="website" />
-
-  <style>
-:root {
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --bg-dark: #000000;
-  --bg-surface: #0a0a0c;
-  --bg-card: rgba(10, 10, 12, 0.85);
-  --border-color: rgba(232, 78, 27, 0.15);
-
-  --primary: #e84e1b;
-  --primary-hover: #ff6200;
-  --primary-glow: rgba(232, 78, 27, 0.25);
-
-  --accent: #ffae19;
-  --text-primary: #ffffff;
-  --text-secondary: #a3a3ac;
-  --text-muted: #62626a;
-
-  --radius-lg: 16px;
-  --radius-md: 10px;
-  --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-sans);
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  background-image: 
-    radial-gradient(circle at top left, rgba(232, 78, 27, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at center right, rgba(255, 174, 25, 0.05) 0%, transparent 35%);
-  background-attachment: fixed;
-}
-
-/* Header */
-.header-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 10;
-}
-
-.brand {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #fff;
-  text-decoration: none;
-}
-
-.brand span {
-  color: var(--primary);
-}
-
-/* Hero Section */
-.hero-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.5rem 2rem 2rem 2rem;
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Tag Badge */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(255, 94, 43, 0.08);
-  border: 1px solid rgba(255, 94, 43, 0.2);
-  color: var(--primary);
-  padding: 0.35rem 1rem;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.hero-rating {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.88rem;
-  font-weight: 800;
-  margin-top: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-
-
-
-.hero-rating .stars {
-  letter-spacing: 1px;
-  color: var(--accent);
-}
-
-.hero-rating .rating-text {
-  color: #ffffff;
-}
-
-/* Headline */
-.hero-section h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
-  margin-bottom: 1.25rem;
-  color: #ffffff;
-  max-width: 900px;
-}
-
-.hero-section h1 span {
-  background: linear-gradient(135deg, var(--primary) 0%, #ff3b6f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Mockup Image Stacked */
-.hero-image-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 1.25rem auto;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7);
-  border: 1px solid var(--border-color);
-  background: #000000;
-}
-
-.hero-stacked-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Subheadline */
-.hero-subheadline {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  max-width: 750px;
-  margin: 0 auto 1.25rem auto;
-  line-height: 1.5;
-}
-
-/* Hero CTA Button */
-.cta-container {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-  width: 100%;
-}
-
-.btn-hero-cta {
-  background: #22c55e;
-  color: #ffffff;
-  border: none;
-  font-weight: 800;
-  font-size: 1rem;
-  padding: 0.85rem 2.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
-  transition: var(--transition-all);
-  letter-spacing: 0.5px;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn-hero-cta:hover {
-  background: #16a34a;
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.55);
-}
-
-/* Top Promo Banner Styles */
-.promo-banner-top {
-  background-color: var(--primary);
-  color: #ffffff;
-  text-align: center;
-  padding: 0.75rem 1rem;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 4px 15px rgba(255, 94, 43, 0.3);
-  text-transform: uppercase;
-}
-
-/* Hero Security Badges */
-.hero-security-badges {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 0.85rem;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.hero-security-badges span {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  letter-spacing: 0.2px;
-}
-
-@media (max-width: 992px) {
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
-  .hero-image-container {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 1rem 0.75rem 1.5rem 0.75rem;
-  }
-
-  .hero-rating {
-    font-size: 0.75rem;
-    gap: 0.35rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.75rem;
-  }
-  .hero-badge {
-    margin-bottom: 0.75rem;
-    font-size: 0.7rem;
-  }
-  .hero-section h1 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
-  }
-  .hero-image-container {
-    margin-bottom: 0.75rem;
-  }
-  .hero-subheadline {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-  .btn-hero-cta {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-  }
-}
-</style>
-
+  <title>Área de Miembros | +150 Ejercicios de Baloncesto en Video</title>
+  
+  <!-- Preconnect to Google Fonts and load stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/members.css">
 </head>
 <body>
 
-  <!-- Top Promo Banner -->
-  <div class="promo-banner-top">
-    <span>🔥 Oferta limitada apenas hoje: <strong id="promo-date"></strong></span>
-  </div>
-
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <h1>+150 Exercícios de <span>Basquete em Vídeo</span></h1>
-
-
-    <!-- Centered Mockup Image -->
-    <div class="hero-image-container">
-      <picture>
-        <source media="(max-width: 768px)" srcset="images/hero_mobile.webp" type="image/webp">
-        <source media="(min-width: 769px)" srcset="images/hero_desktop.webp" type="image/webp">
-        <img src="images/hero.jpg" alt="150 Treinos de Basquete Mockups" class="hero-stacked-img" width="850" height="638" loading="eager" fetchpriority="high">
-      </picture>
-    </div>
-
-    <div class="hero-rating">
-      <span class="stars">⭐⭐⭐⭐⭐</span>
-      <span class="rating-text">(4.9/5,0) +1.200 treinadores e pais aprovam</span>
-    </div>
-
-    <div class="cta-container">
-      <a href="#plano-premium" class="btn-hero-cta">QUERO ACESSAR AGORA</a>
-      <div class="hero-security-badges">
-        <span>🔒 Compra 100% Segura</span>
-        <span>🛡️ Garantia de 7 Dias</span>
-        <span>⚡ Acesso Imediato</span>
+  <!-- Top Dashboard Header -->
+  <header class="members-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        🏀 Basketball<span>Pro</span>
+      </a>
+      
+      <!-- Real-time Progress Tracking -->
+      <div class="progress-section">
+        <div class="progress-text" id="progress-text">
+          Progreso del Entrenamiento: <span>0 de 150</span> (0%)
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Features section representing 'Para Todas as Equipes' -->
-  <section id="recursos" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-color);">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>Para Todas as <span>Equipes</span></h2>
-        <p>Dinâmicas adaptáveis para categorias infantis, juvenis e adultas. Ideal para treinadores, preparadores físicos e escolinhas de basquete.</p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon-wrapper">✓</div>
-          <h3>Para Diferentes Idades</h3>
-          <p>Dinâmicas e exercícios adaptáveis para diferentes idades e níveis de jogo de forma simples.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon-wrapper">✓</div>
-          <h3>Validação de Quadra</h3>
-          <p>Material testado e aprovado em clubes e escolinhas de basquete profissionais.</p>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-icon-wrapper">✓</div>
-          <h3>Desenvolvimento Real</h3>
-          <p>Dinâmicas focadas no desenvolvimento real das habilidades físicas e táticas do seu time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Categories section representing 'Mais de 150 Vídeos divididos em 6 categorias' -->
-  <section id="categorias" class="categories-section">
-    <div class="section-wrapper">
-      <div class="section-header">
-        <h2>Mais de 150 Vídeos divididos em <span>6 Categorias</span></h2>
-        <p>Acesse rapidamente os exercícios que precisa para estruturar seu treino diário.</p>
-      </div>
-
-      <div class="categories-grid">
-        <div class="category-pill">🏀 Exercícios de Arremesso</div>
-        <div class="category-pill">🏃‍♂️ Resistência e Físico</div>
-        <div class="category-pill">🏀 Exercícios de Passe</div>
-        <div class="category-pill">👟 Drible e Controle de Bola</div>
-        <div class="category-pill">⚡ Velocidade e Agilidade</div>
-        <div class="category-pill">🛡️ Sistemas de Defesa</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bonuses section representing 'BÔNUS' -->
-  <section id="bonuses" class="section-wrapper">
-    <div class="section-header">
-      <h2>Bônus Exclusivos inclusos <span>Hoje</span></h2>
-      <p>Ganhe estes materiais de apoio adicionais gratuitamente ao se inscrever agora.</p>
-    </div>
-
-    <div class="bonus-grid">
-      <div class="bonus-box">
-        <span class="bonus-tag">Grátis</span>
-        <h3>BÔNUS: Exercícios de Técnica Individual</h3>
-        <p>Rotinas focadas na melhoria de drible, arremessos especiais e fintas de corpo isoladas para seus atletas praticarem.</p>
-      </div>
-
-      <div class="bonus-box">
-        <span class="bonus-tag">Grátis</span>
-        <h3>BÔNUS: Guia Completo de Treinamento Tático</h3>
-        <p>Livro digital explicativo ilustrando as principais jogadas ensaiadas e sistemas defensivos e ofensivos.</p>
-      </div>
-
-      <div class="bonus-box">
-        <span class="bonus-tag">Grátis</span>
-        <h3>BÔNUS: Pacote de Circuitos Físicos</h3>
-        <p>Circuitos detalhados em estações focando na impulsão, velocidade de arrancada e estabilização articular.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); overflow: hidden;">
-    <div class="section-wrapper" style="padding-bottom: 4rem;">
-      <div class="section-header">
-        <h2>Depoimentos de <span>Treinadores e Pais</span></h2>
-        <p>Arraste para o lado para ver o feedback de quem já utiliza o material</p>
-      </div>
-
-      <!-- Horizontal Scrollable Container -->
-      <div class="testimonials-scroll-container">
-        <div class="testimonial-img-card">
-          <img src="images/depo1.webp" alt="Depoimento de Professor Rafael" loading="lazy" width="400" height="600">
-        </div>
-        <div class="testimonial-img-card">
-          <img src="images/depo2.webp" alt="Depoimento de Marcos" loading="lazy" width="400" height="600">
-        </div>
-        <div class="testimonial-img-card">
-          <img src="images/depo3.webp" alt="Depoimento de Lucas" loading="lazy" width="400" height="600">
-        </div>
-        <div class="testimonial-img-card">
-          <img src="images/depo4.webp" alt="Depoimento de Professora Camila" loading="lazy" width="400" height="600">
-        </div>
-      </div>
-
-      <!-- Visual indicator/dots for scroll instruction -->
-      <div class="scroll-indicator-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing section -->
-  <section class="pricing-wrapper">
-    <div class="section-wrapper" style="padding-top: 0; padding-bottom: 2rem;">
-      <div class="section-header">
-        <h2>Escolha o seu <span>Plano</span></h2>
-        <p>Compre uma única vez e tenha acesso para sempre, incluindo atualizações grátis.</p>
-      </div>
-
-      <div id="preco" class="pricing-grid">
-        <!-- Plano Básico -->
-        <div class="pricing-card">
-          <h3 class="plan-title">Plano Básico</h3>
-          <div class="price-box">
-            <h4>R$ 15<span>,90</span></h4>
-          </div>
-
-          <div class="plan-features">
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Acesso vitalício à plataforma</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>+150 Exercícios de Basquete</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Download de todos os vídeos</span>
-            </div>
-            <div class="plan-feature-item whatsapp">
-              <span class="plan-feature-check whatsapp">✓</span>
-              <span>Envio imediato pelo WhatsApp</span>
+  <!-- Main Grid App Layout -->
+  <main class="members-main">
+    
+    <!-- Sidebar: 6 Basketball Training Categories -->
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <!-- Generated Dynamically by JS -->
+    </nav>
+    
+    <!-- Main Content Area: Video Player & List of active exercises -->
+    <div class="content-area">
+      
+      <!-- Video Detail Panel -->
+      <div class="video-section">
+        <div class="video-container">
+          <!-- Video Mockup Placeholder with play button -->
+          <div class="video-placeholder" id="video-placeholder" onclick="playVideo()">
+            <div class="play-btn-overlay">
+              <svg viewBox="0 0 24 24" width="32" height="32">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
             </div>
           </div>
-
-          <a href="https://pay.wiapy.com/0hQSzpcb8Kn" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
-            Quero o Plano Básico
+          <video id="video-player" controls autoplay style="width: 100%; height: 100%; display: none; border: none; background: #000;"></video>
+          <iframe id="video-iframe" style="width: 100%; height: 100%; display: none; border: none; background: #000;" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div style="text-align: center; margin-top: 0.5rem; font-size: 0.85rem;">
+          <a id="external-video-link" href="#" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem;">
+            Si el video no carga localmente, haz clic aquí para verlo en YouTube ↗
           </a>
-          <div class="security-badges-container">
-            <div class="badge-item">🔒 Compra 100% Segura</div>
-            <div class="badge-item">🛡️ Garantia de 7 Dias</div>
-            <div class="badge-item">⚡ Acesso Vitalício Imediato</div>
-          </div>
         </div>
-
-        <!-- Plano Premium (Destacado) -->
-        <div id="plano-premium" class="pricing-card premium" style="scroll-margin-top: 3rem;">
-          <span class="pricing-badge">Mais Comprado</span>
-          <h3 class="plan-title">Plano Premium</h3>
-          <div class="price-box">
-            <span class="price-original">de R$ 49,90</span>
-            <h4>R$ 24<span>,90</span></h4>
-          </div>
-          <div class="value-badge">🎁 R$ 120,00 em Bônus Inclusos Grátis</div>
-
-          <div class="plan-features">
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Acesso vitalício à plataforma</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>+150 Exercícios de Basquete</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BÔNUS</span> Exercícios de técnica individual</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BÔNUS</span> Guia de Treinamento Tático</span>
-            </div>
-            <div class="plan-feature-item bonus">
-              <span class="plan-feature-check">✓</span>
-              <span><span class="bonus-label">BÔNUS</span> Pacote de Circuitos Físicos</span>
-            </div>
-            <div class="plan-feature-item">
-              <span class="plan-feature-check">✓</span>
-              <span>Download de todos os vídeos</span>
-            </div>
-            <div class="plan-feature-item whatsapp">
-              <span class="plan-feature-check whatsapp">✓</span>
-              <span>Envio imediato pelo WhatsApp</span>
+        
+        <div class="video-info">
+          <div class="video-title-wrap">
+            <h2 class="video-title" id="video-title">Cargando Entrenamiento...</h2>
+            <div class="video-meta-tags">
+              <span class="meta-tag difficulty" id="video-difficulty">Principiante</span>
+              <span class="meta-tag" id="video-duration">0 min</span>
             </div>
           </div>
-
-          <a href="https://pay.wiapy.com/rGyyJ-J4Q2W" class="btn-primary" style="display: block; width: 100%; text-align: center; margin-top: auto;">
-            Quero o Plano Premium
-          </a>
-          <div class="urgency-alert">🔥 Preço promocional garantido apenas hoje!</div>
-          <div class="security-badges-container">
-            <div class="badge-item">🔒 Compra 100% Segura</div>
-            <div class="badge-item">🛡️ Garantia de 7 Dias</div>
-            <div class="badge-item">⚡ Acesso Vitalício Imediato</div>
+          
+          <p class="video-desc" id="video-desc">Selecciona un entrenamiento en la lista lateral para comenzar.</p>
+          
+          <div class="instruction-steps">
+            <h4>📋 Paso a Paso Táctico</h4>
+            <ol id="instruction-list">
+              <!-- Generated Dynamically by JS -->
+            </ol>
           </div>
+          
+          <!-- Complete Button -->
+          <button class="video-complete-btn" id="complete-btn" onclick="toggleComplete()">
+            Marcar como Completado
+          </button>
         </div>
       </div>
-
-      <!-- 7 Day Guarantee Block -->
-      <div class="guarantee-block">
-        <div class="guarantee-seal">🛡️</div>
-        <div class="guarantee-text">
-          <h3>Garantia Incondicional de 7 Dias</h3>
-          <p>Experimente o material por 7 dias. Se você não gostar do conteúdo ou achar que não serve para o seu time, basta enviar um e-mail ou mensagem no suporte e <strong>devolvemos 100% do seu dinheiro</strong>. Sem perguntas ou burocracia.</p>
+      
+      <!-- Playlist Sidebar Panel -->
+      <section class="playlist-section">
+        <div class="playlist-header">
+          <h3>Lista de Ejercicios</h3>
+          <p>Selecciona el entrenamiento para ver el video explicativo</p>
         </div>
-      </div>
+        <div class="exercise-list" id="exercise-list">
+          <!-- Generated Dynamically by JS -->
+        </div>
+      </section>
+      
     </div>
-  </section>
-
-  <!-- FAQ Section representing 'Garantia de 7 dias e perguntas' -->
-  <section id="faq" class="section-wrapper" style="border-top: 1px solid var(--border-color);">
-    <div class="section-header">
-      <h2>Perguntas <span>Frequentes</span></h2>
-    </div>
-
-    <div class="faq-container">
-      <div class="faq-card">
-        <div class="faq-title">Como funciona a entrega do material? <span>+</span></div>
-        <div class="faq-desc">Imediatamente após a confirmação do seu pagamento, você receberá um e-mail com as instruções de acesso à plataforma onde encontrará todo o material disponível para download e uso.</div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-title">Quais formas de pagamento vocês aceitam? <span>+</span></div>
-        <div class="faq-desc">Aceitamos cartões de crédito, débito, PayPal, Pix e transferências bancárias. O pagamento é processado de forma segura através da nossa plataforma certificada.</div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-title">As dinâmicas são validadas para o basquete? <span>+</span></div>
-        <div class="faq-desc">Sim, todas as dinâmicas foram testadas e validadas por treinadores profissionais em clubes e escolinhas de basquete de diferentes países.</div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-title">Como funciona a garantia de 7 dias? <span>+</span></div>
-        <div class="faq-desc">Se por qualquer motivo você não ficar satisfeito com o material, basta entrar em contato conosco dentro dos primeiros 7 dias e devolveremos 100% do seu dinheiro, sem perguntas.</div>
-      </div>
-
-      <div class="faq-card">
-        <div class="faq-title">As dinâmicas servem para quais categorias? <span>+</span></div>
-        <div class="faq-desc">As dinâmicas são adaptadas para todas as categorias: infantil, juvenil e adulta. Cada exercício inclui variações para ajustar a dificuldade conforme o nível dos jogadores.</div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer-wrap">
-    <p>&copy; 2026 BasketballPro. Todos os direitos reservados. Plataforma de treinamento interativa.</p>
+  <footer class="members-footer">
+    <p>&copy; 2026 BasketballPro. Todos los derechos reservados. Panel de Acceso Exclusivo para Alumnos.</p>
   </footer>
 
-  <!-- FAQ Accordion and Countdown Timer script -->
-  <script>
-    // FAQ Accordion
-    document.querySelectorAll('.faq-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const isActive = card.classList.contains('active');
-        document.querySelectorAll('.faq-card').forEach(c => {
-          c.classList.remove('active');
-          c.querySelector('.faq-title span').textContent = '+';
-        });
-
-        if (!isActive) {
-          card.classList.add('active');
-          card.querySelector('.faq-title span').textContent = '−';
-        }
-      });
-    });
-
-    // Set dynamic date in promo banner
-    const dateElement = document.getElementById('promo-date');
-    if (dateElement) {
-      const options = { day: 'numeric', month: 'long' };
-      const today = new Date().toLocaleDateString('pt-BR', options);
-      dateElement.textContent = today;
-    }
-
-    // Social Proof Notifications Loop
-    const firstNames = ['Carlos', 'Ana', 'Ricardo', 'Mariana', 'Lucas', 'Juliana', 'Felipe', 'Gabriela', 'Rodrigo', 'Camila', 'Gustavo', 'Fernanda', 'Diego', 'Beatriz', 'Marcelo', 'Vanessa', 'Thiago', 'Aline', 'Bruno', 'Letícia'];
-    const cities = ['São Paulo/SP', 'Rio de Janeiro/RJ', 'Belo Horizonte/MG', 'Curitiba/PR', 'Porto Alegre/RS', 'Salvador/BA', 'Recife/PE', 'Fortaleza/CE', 'Brasília/DF', 'Florianópolis/SC', 'Goiânia/GO', 'Campinas/SP', 'Vitória/ES', 'Manaus/AM', 'Natal/RN'];
-    const products = ['Plano Premium', 'Plano Básico'];
-    const times = ['agora mesmo', 'há 2 minutos', 'há 5 minutos', 'há 8 minutos', 'há 12 minutos', 'há 15 minutos'];
-    const emojis = ['🏀', '🔥', '✅', '⚡', '🎉'];
-
-    // Create container dynamically
-    const container = document.createElement('div');
-    container.className = 'social-proof-container';
-    document.body.appendChild(container);
-
-    function showNotification() {
-      container.innerHTML = ''; // Clear previous
-
-      const name = firstNames[Math.floor(Math.random() * firstNames.length)];
-      const city = cities[Math.floor(Math.random() * cities.length)];
-      const product = products[Math.random() > 0.35 ? 0 : 1]; // ~65% buy Premium
-      const time = times[Math.floor(Math.random() * times.length)];
-      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-
-      const toast = document.createElement('div');
-      toast.className = 'social-proof-toast';
-      toast.innerHTML = `
-        <div class="toast-icon">${emoji}</div>
-        <div class="toast-content">
-          <p class="toast-title"><strong>${name}</strong> (${city})</p>
-          <p class="toast-body">Adquiriu o <strong>${product}</strong></p>
-          <span class="toast-time">${time}</span>
-        </div>
-      `;
-
-      container.appendChild(toast);
-
-      // Slide in
-      setTimeout(() => {
-        toast.classList.add('show');
-      }, 100);
-
-      // Slide out and remove toast after 5 seconds
-      setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => {
-          toast.remove();
-        }, 500);
-      }, 5000);
-    }
-
-    // Run first notification after 6 seconds, then repeat with random delays
-    setTimeout(showNotification, 6000);
-
-    function triggerNext() {
-      const delay = 18000 + Math.random() * 12000; // Between 18s and 30s
-      setTimeout(() => {
-        showNotification();
-        triggerNext();
-      }, delay);
-    }
-    triggerNext();
-
-    // Testimonials scroll dots active state sync
-    const scrollContainer = document.querySelector('.testimonials-scroll-container');
-    const dots = document.querySelectorAll('.scroll-indicator-dots .dot');
-
-    if (scrollContainer && dots.length > 0) {
-      let cardWidth = 0;
-      const updateCardWidth = () => {
-        const card = scrollContainer.querySelector('.testimonial-img-card');
-        if (card) {
-          cardWidth = card.offsetWidth + 24; // width + gap (1.5rem = 24px)
-        }
-      };
-
-      // Calculate once on load
-      updateCardWidth();
-      window.addEventListener('resize', updateCardWidth);
-
-      scrollContainer.addEventListener('scroll', () => {
-        if (!cardWidth) updateCardWidth();
-        if (!cardWidth) return;
-        const scrollLeft = scrollContainer.scrollLeft;
-        const activeIndex = Math.round(scrollLeft / cardWidth);
-
-        dots.forEach((dot, idx) => {
-          if (idx === activeIndex) {
-            dot.classList.add('active');
-          } else {
-            dot.classList.remove('active');
-          }
-        });
-      }, { passive: true });
-    }
-  </script>
-
-  <!-- Asynchronous non-critical CSS -->
-  <link rel="stylesheet" href="non-critical.css">
-
-  <!-- Asynchronous Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- App Main Logic -->
+  <script src="js/members.js"></script>
 </body>
 </html>
