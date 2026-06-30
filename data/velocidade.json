@@ -1,0 +1,377 @@
+[
+  {
+    "id": "vel_1",
+    "title": "1. Escalera de Agilidad - Toques Rápidos",
+    "difficulty": "Principiante",
+    "duration": "8 min",
+    "youtubeId": "s5L8RL6xlFA",
+    "desc": "Usa una escalera de agilidad para desarrollar pies rápidos tocando cada espacio, base para la movilidad en el baloncesto.",
+    "steps": [
+      "Coloca la escalera de agilidad en el suelo.",
+      "Corre colocando un pie dentro de cada espacio.",
+      "Mantén las rodillas altas y da pasos cortos y rápidos.",
+      "Usa la punta del pie al pisar, nunca el talón.",
+      "Aumenta la velocidad gradualmente manteniendo la precisión."
+    ]
+  },
+  {
+    "id": "vel_2",
+    "title": "2. Sprint y Freno Explosivo (Closeout)",
+    "difficulty": "Principiante",
+    "duration": "8 min",
+    "youtubeId": "CGpMUE9rfkQ",
+    "desc": "Practica la aproximación defensiva (closeout): sprint seguido de una parada controlada en postura baja para contestar tiros.",
+    "steps": [
+      "Colócate a 5-6 metros de distancia de un cono.",
+      "Realiza un sprint a máxima velocidad hacia el cono.",
+      "Detente con control dando pasos cortos y rápidos (repiqueteo).",
+      "Adopta la postura defensiva baja inmediatamente.",
+      "Mantén una mano arriba para simular contestar el tiro."
+    ]
+  },
+  {
+    "id": "vel_3",
+    "title": "3. Cambios de Dirección con Conos",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "qINUbdCHwKw",
+    "desc": "Corre entre conos cambiando de dirección de forma explosiva, simulando cortes rápidos durante el partido.",
+    "steps": [
+      "Coloca 5 conos en un patrón en zigzag.",
+      "Corre hacia cada cono y realiza un cambio de dirección brusco.",
+      "Apoya el pie exterior con fuerza para cambiar de dirección.",
+      "Mantén tu centro de gravedad bajo.",
+      "Completa el circuito y cronometra tu progreso."
+    ]
+  },
+  {
+    "id": "vel_4",
+    "title": "4. Desplazamiento Lateral con Toque de Suelo",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "LRq475zYCFY",
+    "desc": "Desplazamientos laterales (slides) tocando el suelo en cada extremo para ganar velocidad lateral y resistencia muscular.",
+    "steps": [
+      "Colócate entre dos líneas separadas por 4-5 metros.",
+      "Deslízate lateralmente hasta llegar a una línea.",
+      "Toca el suelo con la mano al llegar a la línea.",
+      "Deslízate de regreso hacia la otra línea y repite.",
+      "Completa 10 toques en total sin detener el ritmo."
+    ]
+  },
+  {
+    "id": "vel_5",
+    "title": "5. Drop Step de Reacción Rápida",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "0BB3qlNd6M0",
+    "desc": "Entrena el drop step reativo: ante un estímulo, gira el pie retrasado y arranca en la dirección indicada lo más rápido posible.",
+    "steps": [
+      "Adopta la postura defensiva básica.",
+      "Ante el estímulo (visual o auditivo), reacciona de inmediato.",
+      "Ejecuta el drop step: gira el pie y abre la cadera.",
+      "Recorre 3-4 metros corriendo en esa dirección.",
+      "El tiempo de reacción inicial es más importante que la velocidad de carrera."
+    ]
+  },
+  {
+    "id": "vel_6",
+    "title": "6. Sprint Curvo en la Línea de Tres Puntos",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "mc-VuZDhcdE",
+    "desc": "Sprints siguiendo el arco de la línea de 3 puntos para desarrollar velocidad en curvas y balance lateral.",
+    "steps": [
+      "Colócate en una esquina de la línea de 3 puntos.",
+      "Haz un sprint siguiendo la curvatura de la línea de 3.",
+      "Inclina el cuerpo ligeramente hacia adentro de la curva.",
+      "Mantén una velocidad alta y constante durante el trayecto.",
+      "Completa el arco corriendo de esquina a esquina."
+    ]
+  },
+  {
+    "id": "vel_7",
+    "title": "7. Salto y Sprint de Contraataque",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "WaD2vAUMJnk",
+    "desc": "Combina un salto vertical máximo con un sprint posterior inmediato para simular la captura de rebote y salida rápida.",
+    "steps": [
+      "Realiza un salto vertical con máxima potencia.",
+      "Al tocar el suelo, arranca de inmediato en sprint.",
+      "Recorre 10 metros a máxima velocidad.",
+      "Regresa caminando y repite.",
+      "Realiza 8 repeticiones enfocadas en la velocidad de transición."
+    ]
+  },
+  {
+    "id": "vel_8",
+    "title": "8. Circuito de Desplazamiento en X",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "0TxXYCkyRlM",
+    "desc": "Movimientos en un patrón de X combinando sprints frontales, diagonales y desplazamientos laterales para agilidad.",
+    "steps": [
+      "Coloca conos formando una X grande.",
+      "Haz un sprint frontal de la base al centro.",
+      "Desplázate lateralmente al cono de la derecha.",
+      "Realiza carrera de espaldas (backpedal) al cono trasero.",
+      "Sprint diagonal hacia el cono opuesto. Repite."
+    ]
+  },
+  {
+    "id": "vel_9",
+    "title": "9. Reacción a la Chicharra/Silbato",
+    "difficulty": "Intermedio",
+    "duration": "8 min",
+    "youtubeId": "EZhS4VR_1eE",
+    "desc": "Ante un estímulo auditivo rápido (silbato o chicharra), arranca en sprint de contraataque, ganando aceleración inicial.",
+    "steps": [
+      "Colócate en la línea de fondo en postura defensiva.",
+      "Ante el silbato, gira y arranca a máxima velocidad.",
+      "Corre hasta la canasta opuesta en sprint total.",
+      "Regresa trotando y prepárate para la siguiente repetición.",
+      "El foco principal está en el tiempo de reacción al sonido."
+    ]
+  },
+  {
+    "id": "vel_10",
+    "title": "10. Repiqueteo de Pies en la Pintura",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "yVz_9j4CBUY",
+    "desc": "Repiqueteo rápido dentro del área restringida: movimientos cortos y veloces que simulan batallas en el juego interior.",
+    "steps": [
+      "Párate dentro de la zona de la pintura.",
+      "Realiza un repiqueteo de pies (fast feet) lo más rápido posible.",
+      "Mantén una postura baja con rodillas flexionadas.",
+      "Cambia de dirección o perfil cada 3-4 segundos.",
+      "Mantén por 30 segundos, descansa 15s, realiza 6 series."
+    ]
+  },
+  {
+    "id": "vel_11",
+    "title": "11. Paso Cruzado Lateral (Cross-step)",
+    "difficulty": "Intermedio",
+    "duration": "8 min",
+    "youtubeId": "GZC0xfYFjks",
+    "desc": "Paso cruzado (cross-step) para defensas y cortes: cruza una pierna sobre la otra para ganar posición rápido o rebasar.",
+    "steps": [
+      "Adopta la postura defensiva.",
+      "Cruza la pierna derecha sobre la izquierda con un paso dinámico.",
+      "Gira la cadera y arranca en esa nueva dirección.",
+      "Usa esta técnica para seguir a bases veloces en defensa.",
+      "Practica el paso cruzado hacia ambos lados."
+    ]
+  },
+  {
+    "id": "vel_12",
+    "title": "12. Carrera de Recuperación de Espaldas",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "d_fNeJ9BASY",
+    "desc": "Carrera de espaldas (backpedal) a alta velocidad para recuperar la posición defensiva tras ser rebasado por el ataque.",
+    "steps": [
+      "Corre de espaldas a lo largo de toda la cancha.",
+      "Mantén el peso de tu cuerpo apoyado en la punta de los pies.",
+      "Mira sobre tu hombro para guiarte en el trayecto.",
+      "Da pasos alternados rápidos sin cruzar las piernas.",
+      "Cronometra el cruce e intenta bajar tu tiempo."
+    ]
+  },
+  {
+    "id": "vel_13",
+    "title": "13. Escalera de Agilidad Botando Dos Balones",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "YbbrD7d-WwM",
+    "desc": "Combina ejercicios de pies en la escalera de agilidad mientras botas dos balones, estimulando coordinación superior.",
+    "steps": [
+      "Coloca la escalera de agilidad y toma dos balones.",
+      "Bota ambos balones al realizar el juego de pies en la escalera.",
+      "Da un paso en cada espacio de forma coordinada.",
+      "Tus manos deben botar de forma independiente al movimiento de pies.",
+      "Empieza lento y sube la velocidad gradualmente."
+    ]
+  },
+  {
+    "id": "vel_14",
+    "title": "14. Sentadilla y Salto Explosivo Lateral",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "8m6PDSik76s",
+    "desc": "Sentadillas dinámicas seguidas de saltos laterales explosivos para desarrollar fuerza y salto lateral defensivo y ofensivo.",
+    "steps": [
+      "Realiza una sentadilla profunda.",
+      "Salta explosivamente de forma lateral hacia un costado.",
+      "Aterriza absorbiendo el impacto en posición de sentadilla.",
+      "Repite saltando hacia el lado contrario.",
+      "Realiza 3 series de 10 saltos por cada lado."
+    ]
+  },
+  {
+    "id": "vel_15",
+    "title": "15. Fintas de Corte sin Balón",
+    "difficulty": "Intermedio",
+    "duration": "8 min",
+    "youtubeId": "lPs80MtB6zI",
+    "desc": "Practica fintas y cortes rápidos sin balón para desmarcarte del defensor y recibir pases cómodamente.",
+    "steps": [
+      "Finge correr en una dirección para engañar al defensor.",
+      "Planta el pie exterior y cambia de dirección bruscamente.",
+      "Usa tus hombros y mirada para vender el amague.",
+      "El cambio de dirección debe ser sumamente explosivo.",
+      "Practica cortes en V (V-cuts), en L (L-cuts) y por la espalda (backdoor)."
+    ]
+  },
+  {
+    "id": "vel_16",
+    "title": "16. Sprint con Parada en Un Tiempo (Jump Stop)",
+    "difficulty": "Intermedio",
+    "duration": "8 min",
+    "youtubeId": "aNQATwoONA4",
+    "desc": "Sprints con parada en un tiempo (jump stop): frena cayendo con ambos pies simultáneamente para mantener estabilidad.",
+    "steps": [
+      "Realiza un sprint a alta velocidad.",
+      "Detente saltando levemente y aterrizando con ambos pies al mismo tiempo.",
+      "Mantén el equilibrio total y la base baja al caer.",
+      "Puedes usar cualquiera de los dos pies como pie de pivote.",
+      "Practica parando a diferentes velocidades de carrera."
+    ]
+  },
+  {
+    "id": "vel_17",
+    "title": "17. Sprint con Parada en Dos Tempos (Stride Stop)",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "9g5Eo56pqFg",
+    "desc": "Sprints con parada en dos tiempos (stride stop): frena apoyando primero un pie y luego el otro, definiendo el pivote.",
+    "steps": [
+      "Realiza un sprint a alta velocidad.",
+      "Detente apoyando primero un pie de base y luego el otro.",
+      "El primer pie en tocar el suelo se convierte en tu pie de pivote.",
+      "Mantén el control corporal y el balance en la frenada.",
+      "Practica alternando el pie que inicia la parada."
+    ]
+  },
+  {
+    "id": "vel_18",
+    "title": "18. Desplazamiento Defensivo Diagonal",
+    "difficulty": "Intermedio",
+    "duration": "12 min",
+    "youtubeId": "erDsR-87Jdg",
+    "desc": "Desplazamientos defensivos (slides) en ángulos diagonales para seguir a atacantes que penetran en ángulos variables.",
+    "steps": [
+      "Adopta la postura defensiva baja.",
+      "Deslízate en diagonal hacia adelante y a la derecha.",
+      "Toca el cono/línea y deslízate en diagonal adelante-izquierda.",
+      "Forma un patrón de zigzag defensivo continuo.",
+      "Mantén las manos activas y el pecho erguido al desplazarte."
+    ]
+  },
+  {
+    "id": "vel_19",
+    "title": "19. Sprint para Interceptación de Pase",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "DVTZ_DuZG80",
+    "desc": "Sprints reactivos para cortar líneas de pase, combinando lectura de juego con velocidad de anticipación.",
+    "steps": [
+      "Colócate en postura defensiva de ayuda (off-ball).",
+      "Cuando se simule el pase, arranca en sprint para interceptar.",
+      "Corre directo a cortar la trayectoria aérea del balón.",
+      "Mantén los brazos extendidos para desviar el balón.",
+      "Trabaja en la anticipación y el ángulo de carrera."
+    ]
+  },
+  {
+    "id": "vel_20",
+    "title": "20. Reflejos con Pelota de Reacción",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "QG87HYHE-u0",
+    "desc": "Usa una pelota de reacción (irregular) que bota de forma impredecible para entrenar tus reflejos y agilidad reativa.",
+    "steps": [
+      "Lanza la pelota de reacción contra el suelo o pared.",
+      "Reacciona rápidamente a la dirección errática del rebote.",
+      "Atrapa la pelota antes de que dé un segundo bote.",
+      "Varía la fuerza y el ángulo de lanzamiento.",
+      "Practica atrapando con ambas manos por igual."
+    ]
+  },
+  {
+    "id": "vel_21",
+    "title": "21. Agilidad con Banda Elástica de Tensión",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "kzt3RpWsxgI",
+    "desc": "Usa bandas elásticas durante ejercicios de agilidad para añadir resistencia y ganar fuerza en los movimientos explosivos.",
+    "steps": [
+      "Sujeta el elástico en tu cintura.",
+      "Realiza desplazamientos defensivos luchando contra la tensión.",
+      "Haz sprints cortos de resistencia.",
+      "Ejecuta cambios de dirección explosivos.",
+      "Al retirar el elástico, sentirás un aumento notable de velocidad."
+    ]
+  },
+  {
+    "id": "vel_22",
+    "title": "22. Circuito en T de Agilidad (T-Drill)",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "VNOH_XbWjs8",
+    "desc": "El T-Drill clásico: sprint frontal, deslizamiento lateral derecho, deslizamiento lateral izquierdo y backpedal formando una T.",
+    "steps": [
+      "Coloca 4 conos formando una figura de T.",
+      "Realiza un sprint desde la base hasta el cono central superior.",
+      "Haz un desplazamiento lateral (slide) al cono derecho.",
+      "Deslízate de forma lateral al cono del extremo izquierdo.",
+      "Deslízate de vuelta al centro y haz backpedal a la base."
+    ]
+  },
+  {
+    "id": "vel_23",
+    "title": "23. Desplazamiento Cruzado Rápido con Giro",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "EXfEt9hd7xY",
+    "desc": "Pasos cruzados veloces seguidos de giros rápidos de 180° para simular la persecución defensiva de atacantes escurridizos.",
+    "steps": [
+      "Ejecuta pasos cruzados laterales veloces hacia la derecha.",
+      "Tras 3-4 pasos, realiza un giro de 180 grados y continúa en esa dirección.",
+      "Mantén tu postura baja y balanceada en el giro.",
+      "Realiza el cambio de dirección al oír un estímulo o silbato.",
+      "Practica transiciones limpias y fluidas entre perfiles."
+    ]
+  },
+  {
+    "id": "vel_24",
+    "title": "24. Trabajo de Pies en Escalera Botando Balón",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "SC3vMWwy_fI",
+    "desc": "Juego de pies en la escalera de agilidad mientras botas un balón, integrando la coordinación del tren superior e inferior.",
+    "steps": [
+      "Coloca la escalera de agilidad.",
+      "Dribla el balón con tu mano derecha.",
+      "Realiza patrones de pasos dentro de la escalera.",
+      "Mantén el bote controlado y bajo en todo momento.",
+      "Cambia de mano y repite usando un patrón de pasos diferente."
+    ]
+  },
+  {
+    "id": "vel_25",
+    "title": "25. Desplazamiento y Salto de Bloqueo (Tapón)",
+    "difficulty": "Avanzado",
+    "duration": "12 min",
+    "youtubeId": "8RrszvZ8fUc",
+    "desc": "Combina desplazamientos laterales veloces con salto vertical máximo para bloquear tiros, entrenando timing y explosión.",
+    "steps": [
+      "Deslízate defensivamente en slide lateral por 3 metros.",
+      "De inmediato, salta verticalmente estirando los brazos en alto.",
+      "Simula desviar un tiro del oponente en suspensión.",
+      "Aterriza amortiguando y continúa el desplazamiento lateral.",
+      "Realiza 3 series de 8 saltos combinados."
+    ]
+  }
+]

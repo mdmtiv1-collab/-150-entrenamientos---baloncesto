@@ -1,0 +1,377 @@
+[
+  {
+    "id": "arr_1",
+    "title": "1. Mecánica Básica y Alineación",
+    "difficulty": "Principiante",
+    "duration": "8 min",
+    "youtubeId": "yKy9cQZ0nxg",
+    "desc": "Aprende la posición correcta del cuerpo, la alineación del codo y cómo sostener el balón para un tiro perfecto. Fundamento esencial para principiantes.",
+    "steps": [
+      "Coloca los pies al ancho de los hombros, ligeramente apuntando hacia la canasta.",
+      "Sostén el balón con la mano dominante por debajo y la mano de guía al lado.",
+      "Mantén el codo formando un ángulo de 90 grados.",
+      "Mira hacia la parte trasera del aro como punto de enfoque.",
+      "Extiende el brazo por completo y realiza el quiebre de muñeca al lanzar."
+    ]
+  },
+  {
+    "id": "arr_2",
+    "title": "2. Tiro a Una Mano a Corta Distancia",
+    "difficulty": "Principiante",
+    "duration": "8 min",
+    "youtubeId": "zGg13So8T5g",
+    "desc": "Entrenamiento enfocado en tiros cercanos a la canasta usando solo la mano dominante para desarrollar control y tacto con el balón.",
+    "steps": [
+      "Colócate a 1 metro de la canasta.",
+      "Usa solo la mano dominante para lanzar.",
+      "Enfócate en la rotación inversa del balón (backspin).",
+      "Mantén el seguimiento del tiro (follow-through) por 2 segundos después de lanzar.",
+      "Realiza series de 10 tiros, buscando al menos 8 aciertos."
+    ]
+  },
+  {
+    "id": "arr_3",
+    "title": "3. Tiro en la Zona Muerta (Esquina)",
+    "difficulty": "Principiante",
+    "duration": "10 min",
+    "youtubeId": "46EP4Gmdihw",
+    "desc": "Practica tiros desde la esquina de la cancha, la zona de 3 puntos más cercana, desarrollando precisión y consistencia en esta posición estratégica.",
+    "steps": [
+      "Colócate en la esquina detrás de la línea de 3 puntos.",
+      "Alinea el cuerpo con la canasta a pesar de estar en ángulo.",
+      "Usa el impulso de las piernas para generar potencia.",
+      "Suelta el balón en el punto más alto del salto.",
+      "Alterna entre ambas esquinas cada 5 tiros."
+    ]
+  },
+  {
+    "id": "arr_4",
+    "title": "4. Mikan Drill de Finalización",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "T0PVQUh1O48",
+    "desc": "El clásico Mikan Drill para desarrollar finalizaciones cerca del aro con ambas manos, alternando lados continuamente.",
+    "steps": [
+      "Colócate debajo de la canasta del lado derecho.",
+      "Realiza una bandeja con la mano derecha.",
+      "Atrapa el rebote y cambia al lado izquierdo.",
+      "Realiza una bandeja con la mano izquierda.",
+      "Continúa alternando durante 60 segundos sin parar."
+    ]
+  },
+  {
+    "id": "arr_5",
+    "title": "5. Tiro tras Giro de Pivote",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "JHH_ssYA_8A",
+    "desc": "Combina movimientos de pivote con tiros para simular situaciones reales de juego donde recibes el balón y necesitas crear espacio.",
+    "steps": [
+      "Recibe el balón de espaldas a la canasta.",
+      "Ejecuta un pivote frontal o reverso.",
+      "Al completar el giro, encuadra tu cuerpo con la canasta.",
+      "Lanza inmediatamente después del encuadre.",
+      "Practica pivotes hacia ambos lados."
+    ]
+  },
+  {
+    "id": "arr_6",
+    "title": "6. Catch & Shoot Estático a Media Distancia",
+    "difficulty": "Intermedio",
+    "duration": "10 min",
+    "youtubeId": "Yf7KoSUnmW4",
+    "desc": "Entrena el tiro rápido tras recibir el pase, desarrollando la velocidad de lanzamiento y el posicionamento de los pies.",
+    "steps": [
+      "Pide un pase (o usa la pared) en la zona de media distancia.",
+      "Al recibir, posiciona los pies rápidamente.",
+      "Flexiona las piernas durante la recepción del balón.",
+      "Lanza en el ritmo de la recepción sin dudar.",
+      "Enfócate en ser rápido pero controlado."
+    ]
+  },
+  {
+    "id": "arr_7",
+    "title": "7. Tiro desde la Línea de Tiro Libre",
+    "difficulty": "Principiante",
+    "duration": "8 min",
+    "youtubeId": "GhyIAdabZwg",
+    "desc": "Domina el arte del tiro libre con una rutina consistente, respiración controlada y mecánica repetitiva para maximizar tu porcentaje.",
+    "steps": [
+      "Colócate en el centro de la línea de tiro libre.",
+      "Crea una rutina previa al tiro (1-3 botes).",
+      "Respira profundo antes de cada lanzamiento.",
+      "Mantén los ojos fijos en el aro.",
+      "Ejecuta el tiro siempre con la misma mecánica."
+    ]
+  },
+  {
+    "id": "arr_8",
+    "title": "8. Tiro Fadeaway a Corta Distancia",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "b2F1Wh2Uy-E",
+    "desc": "Aprende el tiro en suspensión hacia atrás (fadeaway) estilo Michael Jordan, creando separación del defensor durante el salto.",
+    "steps": [
+      "Recibe el balón en el poste medio.",
+      "Da un paso hacia atrás creando distancia con el defensor.",
+      "Inclina el tronco ligeramente hacia atrás durante el salto.",
+      "Mantén el brazo de tiro estable y alto.",
+      "Suelta el balón en el punto más alto con una parábola elevada."
+    ]
+  },
+  {
+    "id": "arr_9",
+    "title": "9. Tiro tras Crossover",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "1LQ80e8qs8A",
+    "desc": "Combina el drible crossover con el tiro en suspensión para crear espacio y finalizar en situaciones de aislamiento (1v1).",
+    "steps": [
+      "Comienza driblando con la mano derecha a velocidad moderada.",
+      "Ejecuta un crossover fuerte hacia la mano izquierda.",
+      "Al cambiar de dirección, frena en posición de tiro.",
+      "Recoge el balón rápidamente e inicia la suspensión.",
+      "Practica el movimiento hacia ambos lados."
+    ]
+  },
+  {
+    "id": "arr_10",
+    "title": "10. Step-back de Tres Puntos",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "LGV_3KzrJTA",
+    "desc": "Domina el paso atrás (step-back) de 3 puntos estilo James Harden, creando espacio con un paso largo hacia atrás antes de lanzar.",
+    "steps": [
+      "Avanza driblando en dirección al defensor.",
+      "Ejecuta un paso largo hacia atrás con control.",
+      "Mantén el equilibrio al aterrizar con ambos pies.",
+      "Sube rápidamente para el tiro de 3 puntos.",
+      "Asegúrate de que tus pies no pisen la línea."
+    ]
+  },
+  {
+    "id": "arr_11",
+    "title": "11. Tiro saliendo de Pantalla (Pick & Roll)",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "s36lGmUEtUA",
+    "desc": "Practica tiros tras salir de pantallas, simulando situaciones de pick and roll ofensivo con velocidad y precisión.",
+    "steps": [
+      "Simula salir detrás de una pantalla (usando un cono o compañero).",
+      "Al superar la pantalla, recibe el pase.",
+      "Posiciona los pies rápidamente en dirección al aro.",
+      "Lanza antes de que el defensor se recupere.",
+      "Varie las posiciones: abrirse hacia afuera (pop) o rodar hacia adentro (roll)."
+    ]
+  },
+  {
+    "id": "arr_12",
+    "title": "12. Tiro Rápido tras Recibir Pase",
+    "difficulty": "Intermedio",
+    "duration": "10 min",
+    "youtubeId": "kLTJkEBXRjA",
+    "desc": "Desarrolla la velocidad de tiro lanzando inmediatamente después de recibir el pase, sin tiempo para pensar - puro reflejo.",
+    "steps": [
+      "Muévete hacia una posición libre en la cancha.",
+      "Recibe el pase con las manos ya preparadas para lanzar.",
+      "En un solo movimiento, recibe y lanza.",
+      "Objetivo: soltar el balón en menos de 0.8 segundos.",
+      "Practica en diferentes posiciones de la cancha."
+    ]
+  },
+  {
+    "id": "arr_13",
+    "title": "13. Tiro en Velocidad en Transición",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "VZrkDzyr5PQ",
+    "desc": "Entrena tiros durante la transición rápida de defensa a ataque, manteniendo la forma de tiro incluso a máxima velocidad.",
+    "steps": [
+      "Comienza corriendo desde el fondo de la cancha.",
+      "Recibe el pase en transición a velocidad.",
+      "Reduce la velocidad con pasos controlados.",
+      "Encuadra el cuerpo con la canasta rápidamente.",
+      "Lanza manteniendo la mecánica correcta."
+    ]
+  },
+  {
+    "id": "arr_14",
+    "title": "14. Catch & Shoot de Tres Puntos",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "OsLRa8b5t4Q",
+    "desc": "Tiros de 3 puntos tras una recepción rápida. Foco en el posicionamiento de los pies y la velocidad de lanzamiento desde la línea de 3.",
+    "steps": [
+      "Colócate detrás de la línea de 3 puntos.",
+      "Recibe el pase con los pies ya alineados.",
+      "Usa las piernas como fuente principal de potencia.",
+      "Mantén una parábola alta para aumentar la probabilidad de enceste.",
+      "Realiza series desde 5 posiciones diferentes de la línea de 3."
+    ]
+  },
+  {
+    "id": "arr_15",
+    "title": "15. Tiro Desequilibrado bajo Presión",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "ZTq8iELrcEM",
+    "desc": "Practica tiros en situaciones de desequilibrio y bajo presión defensiva, preparándote para los momentos más difíciles del juego.",
+    "steps": [
+      "Simula un contacto ligero durante el tiro.",
+      "Practica lanzar con los pies no perfectamente alineados.",
+      "Enfócate en mantener el brazo de tiro estable.",
+      "Lanza tras movimientos desequilibrados.",
+      "Desarrolla control corporal en situaciones adversas."
+    ]
+  },
+  {
+    "id": "arr_16",
+    "title": "16. Tiro de Flotadora (Floater)",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "zprfC8PKtks",
+    "desc": "La flotadora es esencial para jugadores rápidos que necesitan definir sobre pívots altos. Aprenda el toque suave y la parábola alta.",
+    "steps": [
+      "Penetra driblando hacia la zona restringida.",
+      "Al encontrarte con el pívot, suelta el balón con una mano.",
+      "Lanza el balón con una parábola muy alta sobre el defensor.",
+      "Usa la yema de los dedos para un toque suave, no la palma.",
+      "Practica flotadoras desde ambos lados del aro."
+    ]
+  },
+  {
+    "id": "arr_17",
+    "title": "17. Tiro con Ángulo Usando el Tablero",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "W6Sff5FGi2Y",
+    "desc": "Domina el uso del tablero para bandejas y tiros en ángulos de 45 grados, usando el cuadro del tablero como objetivo.",
+    "steps": [
+      "Colócate en un ángulo de 45 grados respecto a la canasta.",
+      "Apunta a la esquina superior del cuadro del tablero.",
+      "Usa fuerza moderada: el tablero absorbe el impacto.",
+      "Practica desde ambos lados de la cancha.",
+      "Varía la distancia de 1 a 3 metros del aro."
+    ]
+  },
+  {
+    "id": "arr_18",
+    "title": "18. Tiro de Tres Puntos tras Drible Lateral",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "r38c28nPjWI",
+    "desc": "Combina el drible lateral con el tiro de 3 puntos para crear espacio de forma horizontal antes de lanzar de larga distancia.",
+    "steps": [
+      "Dribla lateralmente a lo largo de la línea de 3 puntos.",
+      "Frena con control usando parada en dos tiempos.",
+      "Encuadra el cuerpo con la canasta durante la parada.",
+      "Lanza inmediatamente en el ritmo del frenado.",
+      "Practica moviéndote hacia ambos lados."
+    ]
+  },
+  {
+    "id": "arr_19",
+    "title": "19. Tiro con Defensor Activo",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "NpFnLXKPxsM",
+    "desc": "Entrena tiros con un defensor contestando activamente, desarrollando concentración y capacidad de finalizar bajo presión real.",
+    "steps": [
+      "Pídele a un compañero que conteste tus tiros de forma activa.",
+      "Enfócate en la canasta incluso con una mano obstaculizando tu visión.",
+      "Usa fintas de tiro (pump fakes) para hacer saltar al defensor.",
+      "Lanza en el momento en que el defensor descienda.",
+      "Mantén la confianza a pesar de la oposición."
+    ]
+  },
+  {
+    "id": "arr_20",
+    "title": "20. Tiro con Cansancio (Fin de Entrenamiento)",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "ofMOCm8n9jc",
+    "desc": "Practica tiros al final del entrenamiento cuando estés exhausto, simulando lanzamientos en los últimos minutos de un juego cerrado.",
+    "steps": [
+      "Realiza una serie de sprints antes de tirar.",
+      "Lanza inmediatamente después del trabajo de acondicionamiento.",
+      "Mantén la misma mecánica a pesar del cansancio.",
+      "Enfócate en usar las piernas aun fatigado.",
+      "Desarrolla resistencia mental para momentos decisivos."
+    ]
+  },
+  {
+    "id": "arr_21",
+    "title": "21. Tiro de Gancho Corto (Baby Hook)",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "qTX0pCoU9Qs",
+    "desc": "El gancho corto (baby hook) es un arma letal cerca del aro. Aprende la técnica inspirada en Kareem Abdul-Jabbar.",
+    "steps": [
+      "Colócate de espaldas parcialmente hacia la canasta.",
+      "Gira el hombro en dirección al aro.",
+      "Lanza el balón con una parábola usando el brazo extendido.",
+      "Protege el balón con tu cuerpo durante el giro.",
+      "Practica ganchos con ambas manos."
+    ]
+  },
+  {
+    "id": "arr_22",
+    "title": "22. Tiro tras Finta (Pump Fake)",
+    "difficulty": "Intermedio",
+    "duration": "11 min",
+    "youtubeId": "OwDuPIJmd58",
+    "desc": "Domina la finta de tiro (pump fake) para hacer saltar al defensor y lanzar con espacio libre, una de las jugadas más inteligentes.",
+    "steps": [
+      "Recibe el balón en posición de tiro.",
+      "Realiza una finta realista levantando el balón rápidamente.",
+      "Observa si el defensor salta.",
+      "Si salta, da un paso lateral y lanza.",
+      "Si no salta, lanza de forma normal."
+    ]
+  },
+  {
+    "id": "arr_23",
+    "title": "23. Pull-up Jump Shot de Media Distancia",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "fXRhV-dtTkQ",
+    "desc": "El tiro tras drible (pull-up) es el tiro más importante para los bases. Detén el drible repentinamente y lanza a media distancia.",
+    "steps": [
+      "Dribla a velocidad moderada en dirección a la canasta.",
+      "Detente repentinamente levantando el balón.",
+      "Salta verticalmente en el momento de la parada.",
+      "Lanza en el punto más alto del salto.",
+      "Practica desde diversas distancias entre 3m y 6m."
+    ]
+  },
+  {
+    "id": "arr_24",
+    "title": "24. Tiro Bajo el Tablero de Espaldas",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "gPAZ9MtfBXk",
+    "desc": "Finalizaciones creativas debajo del aro, pasando por debajo de la red usando bandejas pasadas (reverse layups) y mano contraria.",
+    "steps": [
+      "Penetra por un lado de la canasta.",
+      "Pasa por debajo del aro hacia el lado opuesto.",
+      "Lanza con la mano del lado contrario.",
+      "Usa el tablero como protección contra bloqueos.",
+      "Practica bandejas pasadas con ambas manos."
+    ]
+  },
+  {
+    "id": "arr_25",
+    "title": "25. Simulación de Tiro de Último Segundo",
+    "difficulty": "Avanzado",
+    "duration": "14 min",
+    "youtubeId": "0T_YIEEoplk",
+    "desc": "Entrena tiros de último segundo con presión de tiempo, preparándote mentalmente para los momentos definitorios del partido.",
+    "steps": [
+      "Usa un cronómetro con 5 segundos o menos.",
+      "Recibe el balón y toma una decisión rápida.",
+      "Lanza antes de que suene la chicharra.",
+      "Practica diferentes escenarios: empate, 1 punto abajo.",
+      "Desarrolla calma y confianza bajo presión extrema."
+    ]
+  }
+]
