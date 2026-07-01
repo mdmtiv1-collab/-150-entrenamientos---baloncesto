@@ -15,9 +15,16 @@
 
 <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 
-<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+
 <script>
-  window.pixelId = "6a2b4c7f5581937aca4cadca";
+  window.pixelId = "6a44675d97c4a7bff02cc5b9";
   var a = document.createElement("script");
   a.setAttribute("async", "");
   a.setAttribute("defer", "");
@@ -859,6 +866,31 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
       }
     });
   }
+})();
+
+// Ensure window.location.search is appended to all checkout links targeting pay.hotmart.com
+(function(){
+  function appendQueryParams() {
+    var search = window.location.search;
+    if (!search) return;
+    var links = document.querySelectorAll('a[href*="pay.hotmart.com"]');
+    links.forEach(function(link) {
+      try {
+        var url = new URL(link.href);
+        var currentParams = new URLSearchParams(url.search);
+        var pageParams = new URLSearchParams(search);
+        pageParams.forEach(function(value, key) {
+          currentParams.set(key, value);
+        });
+        url.search = currentParams.toString();
+        link.href = url.toString();
+      } catch(e) {}
+    });
+  }
+  appendQueryParams();
+  window.addEventListener('DOMContentLoaded', appendQueryParams);
+  setTimeout(appendQueryParams, 500);
+  setTimeout(appendQueryParams, 1500);
 })();
 </script>
 </body>
