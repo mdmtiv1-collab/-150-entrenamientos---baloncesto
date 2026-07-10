@@ -121,13 +121,13 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body {
   margin: 0;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  color: #ffffff;
-  background: #000000;
+  color: #1e293b;
+  background: #ffffff;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   background-image: 
-    radial-gradient(circle at top left, rgba(232, 78, 27, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at center right, rgba(255, 174, 25, 0.05) 0%, transparent 35%);
+    radial-gradient(circle at top left, rgba(232, 78, 27, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at center right, rgba(255, 174, 25, 0.03) 0%, transparent 35%);
   background-attachment: fixed;
 }
 img{max-width:100%;height:auto;display:block}
@@ -138,23 +138,23 @@ h1,h2,h3,h4,p{margin:0}
 :root {
   --orange: #e84e1b;
   --orange-hover: #ff6200;
-  --orange-glow: rgba(232, 78, 27, 0.25);
+  --orange-glow: rgba(232, 78, 27, 0.15);
   
-  --green: #22c55e;
-  --green-dark: #16a34a;
-  --green-glow: rgba(34, 197, 94, 0.35);
+  --green: #16a34a;
+  --green-dark: #15803d;
+  --green-glow: rgba(22, 163, 74, 0.2);
 
-  --accent: #ffae19;
+  --accent: #d97706;
   
-  --bg-dark: #000000;
-  --bg-surface: #0a0a0c;
-  --border: rgba(232, 78, 27, 0.15);
+  --bg-dark: #ffffff;
+  --bg-surface: #f8fafc;
+  --border: rgba(232, 78, 27, 0.12);
   
-  --text-secondary: #a3a3ac;
-  --text-muted: #62626a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
 
-  --shadow: 0 4px 20px rgba(0,0,0,.6);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,.85);
+  --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08);
   --radius-lg: 16px;
   --radius-md: 10px;
 }
@@ -170,7 +170,7 @@ h1,h2,h3,h4,p{margin:0}
 /* Hero */
 .hero{padding:48px 0 32px;text-align:center;background:transparent}
 .eyebrow{display:inline-block;color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:18px}
-.hero h1{font-size:clamp(28px, 5vw, 46px);font-weight:900;line-height:1.15;color:#ffffff}
+.hero h1{font-size:clamp(28px, 5vw, 46px);font-weight:900;line-height:1.15;color:#0f172a}
 .hero h1 .orange{color:var(--orange)}
 .hero h1 span.highlight {
   background: linear-gradient(135deg, var(--orange) 0%, #ff3b6f 100%);
@@ -189,7 +189,7 @@ section{padding:64px 0}
 .section-alt{background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .section-title{text-align:center;max-width:760px;margin:0 auto 40px}
 .section-title .eyebrow{margin-bottom:10px}
-.section-title h2{font-size:clamp(24px,3.6vw,34px);font-weight:900;color:#ffffff;line-height:1.2}
+.section-title h2{font-size:clamp(24px,3.6vw,34px);font-weight:900;color:#0f172a;line-height:1.2}
 .section-title h2 span{color:var(--orange)}
 .section-title p{margin-top:12px;color:var(--text-secondary)}
 
@@ -200,7 +200,7 @@ section{padding:64px 0}
 .card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease}
 .card:hover{transform:translateY(-4px);border-color:rgba(232, 78, 27, 0.35);box-shadow:var(--shadow-lg)}
 .icon-box{width:42px;height:42px;border-radius:10px;background:rgba(232, 78, 27, 0.1);border:1px solid rgba(232, 78, 27, 0.25);color:var(--orange);display:grid;place-items:center;margin-bottom:14px;font-weight:900}
-.card h3{font-size:18px;font-weight:800;margin-bottom:8px;color:#ffffff}
+.card h3{font-size:18px;font-weight:800;margin-bottom:8px;color:#0f172a}
 .card p{color:var(--text-secondary);font-size:15px;margin-bottom:14px}
 .card ul{list-style:none;padding:0;margin:0}
 .card ul li{padding:6px 0 6px 26px;position:relative;font-size:14.5px;color:var(--text-secondary)}
@@ -210,7 +210,7 @@ section{padding:64px 0}
 .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:22px}
 .benefit{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;transition:transform .15s ease}
 .benefit:hover{transform:translateY(-2px)}
-.benefit h3{font-size:16px;font-weight:800;color:#ffffff;margin-bottom:6px}
+.benefit h3{font-size:16px;font-weight:800;color:#0f172a;margin-bottom:6px}
 .benefit p{color:var(--text-secondary);font-size:14.5px}
 
 /* Bonus */
@@ -219,19 +219,19 @@ section{padding:64px 0}
 .bonus-card img{aspect-ratio:16/9;object-fit:cover;width:100%}
 .bonus-body{padding:20px}
 .bonus-tag{display:inline-block;background:rgba(255, 174, 25, 0.1);border:1px solid rgba(255, 174, 25, 0.2);color:var(--accent);font-weight:800;font-size:12px;padding:4px 10px;border-radius:999px;margin-bottom:10px}
-.bonus-card h3{font-size:17px;font-weight:800;color:#ffffff;margin-bottom:8px}
+.bonus-card h3{font-size:17px;font-weight:800;color:#0f172a;margin-bottom:8px}
 .bonus-card p{color:var(--text-secondary);font-size:14.5px;margin-bottom:14px}
-.bonus-value{font-weight:800;color:#ffffff}
+.bonus-value{font-weight:800;color:#0f172a}
 .bonus-value s{color:var(--text-muted);margin-right:8px;font-weight:700}
 .bonus-value .free{color:var(--green)}
-.bonus-total{text-align:center;margin-top:30px;font-weight:800;color:#ffffff;font-size:18px}
+.bonus-total{text-align:center;margin-top:30px;font-weight:800;color:#0f172a;font-size:18px}
 .bonus-total .free{color:var(--green)}
 
 /* Timer */
 .timer-wrap{text-align:center}
 .timer-label{display:inline-block;background:linear-gradient(90deg,var(--orange),var(--accent));color:#fff;font-weight:800;padding:8px 16px;border-radius:999px;font-size:13px;letter-spacing:.5px;margin-bottom:18px}
 .timer{display:inline-flex;gap:10px;justify-content:center;margin-bottom:8px}
-.timer .box{background:var(--bg-surface);border:1px solid var(--border);color:#fff;padding:14px 18px;border-radius:10px;min-width:74px;text-align:center;font-weight:900;font-size:28px;font-variant-numeric:tabular-nums;box-shadow:var(--shadow)}
+.timer .box{background:var(--bg-surface);border:1px solid var(--border);color:#0f172a;padding:14px 18px;border-radius:10px;min-width:74px;text-align:center;font-weight:900;font-size:28px;font-variant-numeric:tabular-nums;box-shadow:var(--shadow)}
 .timer .box small{display:block;font-size:11px;font-weight:600;color:var(--text-secondary);margin-top:4px;letter-spacing:.5px}
 
 /* Pricing */
@@ -239,23 +239,23 @@ section{padding:64px 0}
 .price-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;transition:transform .15s ease}
 .price-card.popular{border:2px solid var(--orange);box-shadow:0 12px 30px rgba(232, 78, 27, 0.2)}
 .popular-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--orange),var(--accent));color:#fff;padding:6px 16px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
-.price-name{font-weight:800;color:#ffffff;font-size:18px;text-align:center}
+.price-name{font-weight:800;color:#0f172a;font-size:18px;text-align:center}
 .price-save{text-align:center;color:var(--green);font-weight:800;font-size:13px;margin-top:6px}
 .price-num{text-align:center;margin:14px 0 6px}
 .price-num .old{color:var(--text-muted);text-decoration:line-through;font-weight:700;font-size:18px;display:block}
-.price-num .new{font-size:48px;font-weight:900;color:#ffffff;line-height:1}
+.price-num .new{font-size:48px;font-weight:900;color:#0f172a;line-height:1}
 .price-num .new.green{color:var(--green)}
 .price-num .unit{display:block;color:var(--text-secondary);font-size:13px;margin-top:4px}
 .price-card ul{list-style:none;padding:0;margin:18px 0 22px}
-.price-card ul li{padding:8px 0 8px 28px;position:relative;font-size:14.5px;color:var(--text-secondary);border-bottom:1px dashed rgba(255, 255, 255, 0.05)}
+.price-card ul li{padding:8px 0 8px 28px;position:relative;font-size:14.5px;color:var(--text-secondary);border-bottom:1px dashed rgba(15, 23, 42, 0.06)}
 .price-card ul li:last-child{border-bottom:0}
 .price-card ul li.ok::before{content:"✓";position:absolute;left:0;top:8px;color:var(--green);font-weight:900}
 .price-card ul li.no{color:var(--text-muted);text-decoration:line-through}
 .price-card ul li.no::before{content:"✕";position:absolute;left:0;top:8px;color:#dc2626;font-weight:900;text-decoration:none}
 .price-cta{display:block;text-align:center;font-weight:800;padding:15px;border-radius:999px;text-decoration:none;width:100%;margin-top:auto;transition:transform .15s ease}
 .price-cta:hover{transform:translateY(-2px)}
-.price-cta.basic{background:#1f2937;color:#ffffff;border:1px solid rgba(255,255,255,0.1)}
-.price-cta.basic:hover{background:#374151}
+.price-cta.basic{background:#f1f5f9;color:#0f172a;border:1px solid #cbd5e1}
+.price-cta.basic:hover{background:#e2e8f0}
 .price-cta.full{background:linear-gradient(90deg,var(--orange),var(--orange-hover));color:#fff;box-shadow:0 8px 20px var(--orange-glow)}
 .pay-info{text-align:center;color:var(--text-secondary);margin-top:18px;font-size:13px}
 
@@ -266,7 +266,7 @@ section{padding:64px 0}
   margin: 0 auto;
   border-radius: 36px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
   border: 6px solid var(--border);
   background: #000000;
   aspect-ratio: 9 / 16;
@@ -291,13 +291,13 @@ section{padding:64px 0}
 .t-text{color:var(--text-secondary);font-size:15px;margin-bottom:16px;font-style:italic}
 .t-author{display:flex;align-items:center;gap:12px}
 .t-author img{width:44px;height:44px;border-radius:50%;object-fit:cover}
-.t-author strong{display:block;color:#ffffff;font-size:14.5px}
+.t-author strong{display:block;color:#0f172a;font-size:14.5px}
 .t-author span{color:var(--text-secondary);font-size:13px}
 
 /* Guarantee */
 .guarantee{max-width:760px;margin:0 auto;background:var(--bg-surface);border:1px solid var(--border);border-radius:16px;padding:32px;box-shadow:var(--shadow);text-align:center;position:relative}
 .guarantee .shield{width:60px;height:60px;border-radius:14px;background:rgba(232, 78, 27, 0.1);color:var(--orange);display:grid;place-items:center;margin:0 auto 14px;font-size:30px}
-.guarantee h3{font-size:22px;font-weight:900;color:#ffffff;margin-bottom:10px}
+.guarantee h3{font-size:22px;font-weight:900;color:#0f172a;margin-bottom:10px}
 .guarantee p{color:var(--text-secondary);margin-bottom:14px}
 .guarantee ul{list-style:none;padding:0;margin:0;display:inline-block;text-align:left}
 .guarantee ul li{padding:6px 0 6px 26px;position:relative;color:var(--text-secondary);font-size:14.5px}
@@ -306,7 +306,7 @@ section{padding:64px 0}
 /* FAQ */
 .faq{max-width:780px;margin:0 auto}
 .faq details{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;padding:0;overflow:hidden;box-shadow:var(--shadow)}
-.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;color:#ffffff;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15.5px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;color:#0f172a;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15.5px}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";color:var(--orange);font-size:24px;font-weight:700;transition:transform .2s}
 .faq details[open] summary::after{content:"–"}
@@ -314,7 +314,7 @@ section{padding:64px 0}
 .faq-cta{text-align:center;margin-top:30px}
 
 /* Footer */
-footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size:13.5px;background:#020203;border-top:1px solid rgba(255, 255, 255, 0.05)}
+footer{padding:30px 16px;text-align:center;color:#94a3b8;font-size:13.5px;background:#0f172a;border-top:1px solid rgba(255, 255, 255, 0.05)}
 
 /* Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:999;padding:16px;overflow-y:auto}
@@ -322,11 +322,11 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
 .modal{background:var(--bg-surface);border:1px solid var(--border);border-radius:16px;max-width:480px;width:100%;padding:28px 24px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.6);animation:popin .25s ease}
 @keyframes popin{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
 .modal-close{position:absolute;top:10px;right:14px;background:transparent;font-size:24px;color:var(--text-muted);width:32px;height:32px;border-radius:50%}
-.modal h3{font-size:22px;font-weight:900;color:#ffffff;text-align:center;margin-bottom:10px;line-height:1.25}
+.modal h3{font-size:22px;font-weight:900;color:#0f172a;text-align:center;margin-bottom:10px;line-height:1.25}
 .modal .sub{text-align:center;color:var(--text-secondary);margin-bottom:18px;font-size:15px}
 .modal .sub b{color:var(--orange)}
 .modal ul{list-style:none;padding:0;margin:0 0 18px}
-.modal ul li{padding:6px 0 6px 26px;position:relative;font-size:14.5px;color:var(--text-secondary);border-bottom:1px dashed rgba(255, 255, 255, 0.05)}
+.modal ul li{padding:6px 0 6px 26px;position:relative;font-size:14.5px;color:var(--text-secondary);border-bottom:1px dashed rgba(15, 23, 42, 0.06)}
 .modal ul li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--green);font-weight:900}
 .modal .urgency{text-align:center;color:var(--accent);font-weight:700;margin-bottom:16px;font-size:14px}
 .modal .btn-primary{display:block;background:var(--green);color:#fff;font-weight:800;padding:15px;border-radius:999px;text-align:center;text-decoration:none;margin-bottom:12px;box-shadow:0 8px 20px var(--green-glow)}
@@ -352,12 +352,12 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
   max-width: 270px;
 }
 .social-proof-toast {
-  background: rgba(10, 10, 12, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--border);
   backdrop-filter: blur(10px);
   padding: 0.6rem 0.9rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -386,7 +386,7 @@ footer{padding:30px 16px;text-align:center;color:var(--text-secondary);font-size
 }
 .toast-title {
   font-size: 0.78rem;
-  color: #fff;
+  color: #0f172a;
   margin-bottom: 1px;
   line-height: 1.2;
 }
