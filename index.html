@@ -852,9 +852,12 @@ footer{padding:30px 16px;text-align:center;color:#94a3b8;font-size:13.5px;backgr
 <script>
 // Date in top bar
 (function(){
-  var d=new Date();
-  var options = { day: 'numeric', month: 'long' };
-  document.getElementById('todayDate').textContent=d.toLocaleDateString('es-ES', options)+' de '+d.getFullYear();
+  var el = document.getElementById('todayDate');
+  if (el) {
+    var d=new Date();
+    var options = { day: 'numeric', month: 'long' };
+    el.textContent=d.toLocaleDateString('es-ES', options)+' de '+d.getFullYear();
+  }
 })();
 
 // Set dynamic date in promo banner
