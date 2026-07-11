@@ -980,6 +980,83 @@ footer{padding:30px 16px;text-align:center;color:#94a3b8;font-size:13.5px;backgr
   setTimeout(appendQueryParams, 500);
   setTimeout(appendQueryParams, 1500);
 })();
+
+
+// Dynamic Geolocation Local Currency Pricing
+(function() {
+  const priceMap = {
+    ES: { name: 'Euros', basic: '5,90 €', oldBasic: '10 €', complete: '15,90 €', oldComplete: '27 €', downsell: '9,90 €', insteadOf: '15,90 €' },
+    MX: { name: 'Pesos Mexicanos', basic: '$119 MXN', oldBasic: '$200 MXN', complete: '$299 MXN', oldComplete: '$500 MXN', downsell: '$189 MXN', insteadOf: '$299 MXN' },
+    CO: { name: 'Pesos Colombianos', basic: '$24.900 COP', oldBasic: '$40.000 COP', complete: '$64.900 COP', oldComplete: '$110.000 COP', downsell: '$39.900 COP', insteadOf: '$64.900 COP' },
+    CL: { name: 'Pesos Chilenos', basic: '$5.900 CLP', oldBasic: '$10.000 CLP', complete: '$15.900 CLP', oldComplete: '$27.000 CLP', downsell: '$9.900 CLP', insteadOf: '$15.900 CLP' },
+    PE: { name: 'Soles', basic: 'S/ 22', oldBasic: 'S/ 40', complete: 'S/ 60', oldComplete: 'S/ 100', downsell: 'S/ 37', insteadOf: 'S/ 60' }
+  };
+
+  function updatePrices(data) {
+    const country = data.country_code || data.country || data.countryCode;
+    const geo = priceMap[country];
+    if (!geo) return; // Keep defaults (USD)
+
+    // Update main cards
+    const cards = document.querySelectorAll('.price-card');
+    if (cards && cards.length >= 2) {
+      // Basic Card
+      const basicOld = cards[0].querySelector('.old');
+      const basicNew = cards[0].querySelector('.new');
+      if (basicOld) basicOld.textContent = geo.oldBasic;
+      if (basicNew) basicNew.textContent = geo.basic;
+
+      // Complete Card
+      const completeOld = cards[1].querySelector('.old');
+      const completeNew = cards[1].querySelector('.new');
+      if (completeOld) completeOld.textContent = geo.oldComplete;
+      if (completeNew) completeNew.textContent = geo.complete;
+    }
+
+    // Update downsell modal text
+    const modalSub = document.querySelector('.modal .sub');
+    if (modalSub) {
+      modalSub.innerHTML = `Haz upgrade al Plan Completo ahora por solo <b>${geo.downsell}</b> (en vez de ${geo.insteadOf})`;
+    }
+
+    const modalBtn = document.querySelector('.modal .btn-primary');
+    if (modalBtn) {
+      modalBtn.textContent = `Sí, quiero el Plan Completo por ${geo.downsell}`;
+    }
+
+    // Add info note about local currency
+    const payInfos = document.querySelectorAll('.pay-info');
+    if (payInfos && payInfos.length > 0) {
+      const lastInfo = payInfos[payInfos.length - 1];
+      if (lastInfo) {
+        lastInfo.textContent = `Precios aproximados convertidos a ${geo.name}. El valor final exacto se procesará en tu moneda local al momento del pago.`;
+      }
+    }
+  }
+
+  // Fetch geolocation with 2-second timeout to avoid any loading delay
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 2000);
+
+  fetch('https://ipapi.co/json/', { signal: controller.signal })
+    .then(res => res.json())
+    .then(data => {
+      clearTimeout(timeoutId);
+      updatePrices(data);
+    })
+    .catch(() => {
+      // Fallback API if ipapi.co fails
+      fetch('https://ipwho.is/')
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.success) {
+            updatePrices({ country_code: data.country_code, name: data.currency.name });
+          }
+        })
+        .catch(() => {});
+    });
+})();
+
 </script>
 
 </body>
