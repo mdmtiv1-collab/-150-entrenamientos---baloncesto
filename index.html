@@ -982,20 +982,40 @@ footer{padding:30px 16px;text-align:center;color:#94a3b8;font-size:13.5px;backgr
 })();
 
 
-// Dynamic Geolocation Local Currency Pricing
-(function() {
-  const priceMap = {
-    ES: { name: 'Euros', basic: '5,90 €', oldBasic: '10 €', complete: '15,90 €', oldComplete: '27 €', downsell: '9,90 €', insteadOf: '15,90 €' },
-    MX: { name: 'Pesos Mexicanos', basic: '$119 MXN', oldBasic: '$200 MXN', complete: '$299 MXN', oldComplete: '$500 MXN', downsell: '$189 MXN', insteadOf: '$299 MXN' },
-    CO: { name: 'Pesos Colombianos', basic: '$24.900 COP', oldBasic: '$40.000 COP', complete: '$64.900 COP', oldComplete: '$110.000 COP', downsell: '$39.900 COP', insteadOf: '$64.900 COP' },
-    CL: { name: 'Pesos Chilenos', basic: '$5.900 CLP', oldBasic: '$10.000 CLP', complete: '$15.900 CLP', oldComplete: '$27.000 CLP', downsell: '$9.900 CLP', insteadOf: '$15.900 CLP' },
-    PE: { name: 'Soles', basic: 'S/ 22', oldBasic: 'S/ 40', complete: 'S/ 60', oldComplete: 'S/ 100', downsell: 'S/ 37', insteadOf: 'S/ 60' }
-  };
 
-  function updatePrices(data) {
-    const country = data.country_code || data.country || data.countryCode;
-    const geo = priceMap[country];
-    if (!geo) return; // Keep defaults (USD)
+// Dynamic Global Geolocation Currency Conversion
+(function() {
+  function getPrettyPrice(val, currencyCode) {
+    let raw = val;
+    if (['USD', 'EUR', 'GBP', 'CAD', 'AUD'].includes(currencyCode)) {
+      let integerPart = Math.floor(raw);
+      return new Intl.NumberFormat('es', { style: 'currency', currency: currencyCode }).format(integerPart + 0.90);
+    } else {
+      let rounded = Math.round(raw);
+      if (currencyCode === 'COP' || currencyCode === 'CLP') {
+        let thousands = Math.floor(rounded / 1000);
+        if (thousands === 0) return new Intl.NumberFormat('es', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0 }).format(rounded);
+        return new Intl.NumberFormat('es', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0 }).format(thousands * 1000 + 900);
+      } else if (['MXN', 'PEN', 'GTQ', 'ARS', 'BOP', 'UYU', 'CRC', 'HNL', 'NIO', 'DOP', 'PYG'].includes(currencyCode)) {
+        let tens = Math.floor(rounded / 10);
+        if (tens === 0) return new Intl.NumberFormat('es', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0 }).format(rounded);
+        return new Intl.NumberFormat('es', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0 }).format(tens * 10 + 9);
+      } else {
+        return new Intl.NumberFormat('es', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0 }).format(rounded);
+      }
+    }
+  }
+
+  function updatePrices(currencyCode, rate, currencyName) {
+    if (!rate || currencyCode === 'USD') return;
+
+    // Convert values
+    const basic = getPrettyPrice(5 * rate, currencyCode);
+    const oldBasic = getPrettyPrice(10 * rate, currencyCode);
+    const complete = getPrettyPrice(15 * rate, currencyCode);
+    const oldComplete = getPrettyPrice(27 * rate, currencyCode);
+    const downsell = getPrettyPrice(9.90 * rate, currencyCode);
+    const insteadOf = getPrettyPrice(15 * rate, currencyCode);
 
     // Update main cards
     const cards = document.querySelectorAll('.price-card');
@@ -1003,25 +1023,25 @@ footer{padding:30px 16px;text-align:center;color:#94a3b8;font-size:13.5px;backgr
       // Basic Card
       const basicOld = cards[0].querySelector('.old');
       const basicNew = cards[0].querySelector('.new');
-      if (basicOld) basicOld.textContent = geo.oldBasic;
-      if (basicNew) basicNew.textContent = geo.basic;
+      if (basicOld) basicOld.textContent = oldBasic;
+      if (basicNew) basicNew.textContent = basic;
 
       // Complete Card
       const completeOld = cards[1].querySelector('.old');
       const completeNew = cards[1].querySelector('.new');
-      if (completeOld) completeOld.textContent = geo.oldComplete;
-      if (completeNew) completeNew.textContent = geo.complete;
+      if (completeOld) completeOld.textContent = oldComplete;
+      if (completeNew) completeNew.textContent = complete;
     }
 
     // Update downsell modal text
     const modalSub = document.querySelector('.modal .sub');
     if (modalSub) {
-      modalSub.innerHTML = `Haz upgrade al Plan Completo ahora por solo <b>${geo.downsell}</b> (en vez de ${geo.insteadOf})`;
+      modalSub.innerHTML = `Haz upgrade al Plan Completo ahora por solo <b>${downsell}</b> (en vez de ${insteadOf})`;
     }
 
     const modalBtn = document.querySelector('.modal .btn-primary');
     if (modalBtn) {
-      modalBtn.textContent = `Sí, quiero el Plan Completo por ${geo.downsell}`;
+      modalBtn.textContent = `Sí, quiero el Plan Completo por ${downsell}`;
     }
 
     // Add info note about local currency
@@ -1029,32 +1049,44 @@ footer{padding:30px 16px;text-align:center;color:#94a3b8;font-size:13.5px;backgr
     if (payInfos && payInfos.length > 0) {
       const lastInfo = payInfos[payInfos.length - 1];
       if (lastInfo) {
-        lastInfo.textContent = `Precios aproximados convertidos a ${geo.name}. El valor final exacto se procesará en tu moneda local al momento del pago.`;
+        lastInfo.textContent = `Precios aproximados convertidos a ${currencyName}. El valor final exacto se procesará en tu moneda local al momento del pago.`;
       }
     }
   }
 
-  // Fetch geolocation with 2-second timeout to avoid any loading delay
+  // Fetch geolocation and exchange rates in parallel with timeout
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 2000);
+  const timeoutId = setTimeout(() => controller.abort(), 2500);
 
-  fetch('https://ipapi.co/json/', { signal: controller.signal })
-    .then(res => res.json())
-    .then(data => {
-      clearTimeout(timeoutId);
-      updatePrices(data);
-    })
-    .catch(() => {
-      // Fallback API if ipapi.co fails
+  Promise.all([
+    fetch('https://ipapi.co/json/', { signal: controller.signal }).then(r => r.json()).catch(() => null),
+    fetch('https://open.er-api.com/v6/latest/USD', { signal: controller.signal }).then(r => r.json()).catch(() => null)
+  ]).then(([geoData, rateData]) => {
+    clearTimeout(timeoutId);
+    if (!geoData || !rateData || rateData.result !== 'success') {
+      // Fallback API if primary fails
       fetch('https://ipwho.is/')
-        .then(res => res.json())
+        .then(r => r.json())
         .then(data => {
           if (data && data.success) {
-            updatePrices({ country_code: data.country_code, name: data.currency.name });
+            const currencyCode = data.currency.code;
+            const rate = data.currency.rates && data.currency.rates.USD ? (1 / data.currency.rates.USD) : null;
+            if (rate) {
+              updatePrices(currencyCode, rate, data.currency.name);
+            }
           }
         })
         .catch(() => {});
-    });
+      return;
+    }
+
+    const currencyCode = geoData.currency;
+    const currencyName = geoData.currency_name || currencyCode;
+    const rate = rateData.rates[currencyCode];
+    if (rate) {
+      updatePrices(currencyCode, rate, currencyName);
+    }
+  }).catch(() => {});
 })();
 
 </script>
